@@ -37,6 +37,15 @@
 <body>
     <h1>Welcome to MagicTap</h1>
     <p>Click below to download the app:</p>
-    <a href="magictap.dmg" download class="button">Download MagicTap for macOS</a>
+    <a href="magictap.dmg" download class="button" id="download-btn">Download MagicTap for macOS</a>
+
+    <script>
+      document.getElementById('download-btn').addEventListener('click', function() {
+        gtag('event', 'download_click', {
+          'event_category': 'engagement',
+          'event_label': 'MagicTap DMG Download',
+        });
+      });
+    </script>
 </body>
 </html>
