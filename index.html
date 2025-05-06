@@ -13,58 +13,73 @@
     </script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
             margin: 0;
-            padding: 0;
-        }
-        .container {
-            margin-top: 100px;
-        }
-        h1 {
-            font-size: 36px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
             color: #333;
+            text-align: center;
         }
-        p {
-            font-size: 18px;
-            color: #555;
-            max-width: 600px;
-            margin: 20px auto;
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         #downloadButton {
             display: inline-block;
-            padding: 15px 40px;
-            background-color: #007BFF;
+            padding: 15px 30px;
+            background-color: #28a745;
             color: #fff;
             text-decoration: none;
-            border-radius: 8px;
-            font-size: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background-color 0.3s, transform 0.2s;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
         }
         #downloadButton:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+            background-color: #218838;
+        }
+        iframe {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 640px;
+            height: 360px;
+            border: none;
+            border-radius: 8px;
         }
         footer {
-            margin-top: 60px;
-            font-size: 12px;
-            color: #888;
+            background-color: #333;
+            color: #ccc;
+            padding: 15px 0;
+            font-size: 14px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>MagicTap for Magic Mouse</h1>
-        <p>
-            MagicTap brings tap-to-click functionality to your Apple Magic Mouse, letting you tap the surface to click instead of pressing the physical button. Simple, fast, and made for macOS.
-        </p>
-        <a href="MagicTap.dmg" id="downloadButton">Download MagicTap</a>
-    </div>
+    <header>
+        MagicTap for Magic Mouse
+    </header>
+    <main>
+        <h1>Welcome to MagicTap</h1>
+        <p>Download the MagicTap app to enable tap-to-click functionality on your Apple Magic Mouse. Improve your workflow and experience smoother interactions.</p>
+        <a href="MagicTap.dmg" id="downloadButton">Download MagicTap for macOS</a>
 
+        <h2 style="margin-top: 40px;">Watch the Tutorial</h2>
+        <!-- Replace the YouTube link below with your actual video -->
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+    </main>
     <footer>
-        &copy; 2025 MagicTap. All rights reserved.
+        &copy; 2025 MagicTapMouse.com | Contact: support@magictapmouse.com
     </footer>
 
     <script>
