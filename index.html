@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MagicTap Download</title>
-  
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'YOUR_TRACKING_ID');
-  </script>
+    <meta charset="UTF-8">
+    <title>MagicTap App</title>
 
-  <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      margin-top: 100px;
-    }
-    a.button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #007acc;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    a.button:hover {
-      background: #005fa3;
-    }
-  </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFRKRVGTL4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SFRKRVGTL4');
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        a.button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>Welcome to MagicTap!</h1>
-  <p>Click below to download the latest version:</p>
-  <a href="magictap.dmg" class="button" id="download-link">Download MagicTap.dmg</a>
-
-  <script>
-    document.getElementById('download-link').addEventListener('click', function() {
-      gtag('event', 'download', {
-        'event_category': 'engagement',
-        'event_label': 'MagicTap DMG Download'
-      });
-    });
-  </script>
-
+    <h1>Welcome to MagicTap</h1>
+    <p>Click below to download the app:</p>
+    <a href="magictap.dmg" download class="button">Download MagicTap for macOS</a>
 </body>
 </html>
