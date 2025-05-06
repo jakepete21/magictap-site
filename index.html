@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MagicTap Download</title>
+    <title>MagicTap for Magic Mouse</title>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFRKRVGTL4"></script>
     <script>
@@ -15,26 +15,57 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
             margin-top: 100px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            max-width: 600px;
+            margin: 20px auto;
         }
         #downloadButton {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 15px 40px;
             background-color: #007BFF;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
+            border-radius: 8px;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.2s;
         }
         #downloadButton:hover {
             background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        footer {
+            margin-top: 60px;
+            font-size: 12px;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <h1>Download MagicTap</h1>
-    <p>Click the button below to download the MagicTap app for Magic Mouse:</p>
-    <a href="MagicTap.dmg" id="downloadButton">Download MagicTap</a>
+    <div class="container">
+        <h1>MagicTap for Magic Mouse</h1>
+        <p>
+            MagicTap brings tap-to-click functionality to your Apple Magic Mouse, letting you tap the surface to click instead of pressing the physical button. Simple, fast, and made for macOS.
+        </p>
+        <a href="MagicTap.dmg" id="downloadButton">Download MagicTap</a>
+    </div>
+
+    <footer>
+        &copy; 2025 MagicTap. All rights reserved.
+    </footer>
 
     <script>
       const downloadButton = document.getElementById('downloadButton');
