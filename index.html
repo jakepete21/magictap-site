@@ -2,48 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MagicTap App</title>
-
-    <!-- Google tag (gtag.js) -->
+    <title>MagicTap Download</title>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFRKRVGTL4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-SFRKRVGTL4');
     </script>
-
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 100px;
         }
-        a.button {
+        #downloadButton {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: #007bff;
-            color: white;
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: #fff;
             text-decoration: none;
-            border-radius: 4px;
-            font-size: 16px;
+            border-radius: 5px;
+            font-size: 18px;
         }
-        a.button:hover {
+        #downloadButton:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to MagicTap</h1>
-    <p>Click below to download the app:</p>
-    <a href="magictap.dmg" download class="button" id="download-btn">Download MagicTap for macOS</a>
+    <h1>Download MagicTap</h1>
+    <p>Click the button below to download the MagicTap app for macOS:</p>
+    <a href="/Users/jakepete/Desktop/MagicTap.dmg" id="downloadButton">Download MagicTap</a>
 
     <script>
-      document.getElementById('download-btn').addEventListener('click', function() {
+      const downloadButton = document.getElementById('downloadButton');
+      downloadButton.addEventListener('click', () => {
         gtag('event', 'download_click', {
-          'event_category': 'engagement',
-          'event_label': 'MagicTap DMG Download',
+          event_category: 'engagement',
+          event_label: 'MagicTap DMG',
+          value: 1
         });
       });
     </script>
