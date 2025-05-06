@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MagicTap for Magic Mouse</title>
+    <title>MagicTap Retro Edition</title>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFRKRVGTL4"></script>
     <script>
@@ -12,74 +12,84 @@
       gtag('config', 'G-SFRKRVGTL4');
     </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #fff3e0;
+            color: #5d4037;
             text-align: center;
         }
         header {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 20px 0;
-            font-size: 28px;
-            font-weight: bold;
+            background-color: #ff7043;
+            color: #fffde7;
+            padding: 30px 0;
+            font-size: 20px;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         main {
             max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffe0b2;
+            border: 4px dashed #ff7043;
+            border-radius: 12px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, p {
+            margin-bottom: 20px;
         }
         #downloadButton {
             display: inline-block;
             padding: 15px 30px;
-            background-color: #28a745;
-            color: #fff;
+            background-color: #ff7043;
+            color: #fffde7;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
+            border: 3px solid #d84315;
+            border-radius: 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.2s;
         }
         #downloadButton:hover {
-            background-color: #218838;
+            background-color: #f4511e;
+            transform: scale(1.1);
         }
         iframe {
             margin-top: 30px;
             width: 100%;
             max-width: 640px;
             height: 360px;
-            border: none;
+            border: 4px solid #ff7043;
             border-radius: 8px;
         }
         footer {
-            background-color: #333;
-            color: #ccc;
+            background-color: #ff7043;
+            color: #fffde7;
             padding: 15px 0;
-            font-size: 14px;
-            margin-top: 40px;
+            font-size: 10px;
+            margin-top: 50px;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
     <header>
-        MagicTap for Magic Mouse
+        MagicTap Retro Edition
     </header>
     <main>
-        <h1>Welcome to MagicTap</h1>
-        <p>Download the MagicTap app to enable tap-to-click functionality on your Apple Magic Mouse. Improve your workflow and experience smoother interactions.</p>
-        <a href="MagicTap.dmg" id="downloadButton">Download MagicTap for macOS</a>
+        <h1>✨ Bring Retro Magic to Your Magic Mouse ✨</h1>
+        <p>Download MagicTap to enable tap-to-click on your Apple Magic Mouse, with a dash of retro charm!</p>
+        <a href="MagicTap.dmg" id="downloadButton">⬇️ Download MagicTap for macOS</a>
 
-        <h2 style="margin-top: 40px;">Watch the Tutorial</h2>
+        <h2>🎬 Watch the Setup Tutorial</h2>
         <!-- Replace the YouTube link below with your actual video -->
         <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
     </main>
     <footer>
-        &copy; 2025 MagicTapMouse.com | Contact: support@magictapmouse.com
+        &copy; 2025 MagicTapMouse.com | Created with 💛 for retro lovers
     </footer>
 
     <script>
