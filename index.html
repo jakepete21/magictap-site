@@ -87,6 +87,48 @@
             border-radius: 12px;
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
         }
+        .feedback {
+            margin-top: 50px;
+            text-align: left;
+        }
+        .feedback h2 {
+            color: #E43D12;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .feedback form {
+            display: flex;
+            flex-direction: column;
+        }
+        .feedback input, .feedback textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .feedback button {
+            width: fit-content;
+            padding: 10px 20px;
+            background-color: #EFB11D;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feedback button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .feedback .word-count {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: right;
+        }
         footer {
             width: 100%;
             background-color: #D6536D;
@@ -120,8 +162,21 @@
         </div>
 
         <h2>Setup Video</h2>
-        <!-- Replace with your actual YouTube embed link -->
         <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+
+        <section class="feedback">
+            <h2>We’d love your feedback!</h2>
+            <form id="feedbackForm">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Feedback:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us what you think..." required></textarea>
+                <div class="word-count" id="wordCount">0 / 100 words</div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
     </main>
 
     <footer>
@@ -136,6 +191,48 @@
           event_label: 'MagicTap DMG',
           value: 1
         });
+      });
+
+      const feedbackForm = document.getElementById('feedbackForm');
+      const messageField = document.getElementById('message');
+      const wordCountDisplay = document.getElementById('wordCount');
+
+      messageField.addEventListener('input', () => {
+        const words = messageField.value.trim().split(/\s+/).filter(Boolean);
+        const count = words.length;
+        wordCountDisplay.textContent = `${count} / 100 words`;
+        if (count > 100) {
+          messageField.value = words.slice(0, 100).join(' ');
+          wordCountDisplay.textContent = `100 / 100 words (limit reached)`;
+        }
+      });
+
+      feedbackForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const endpoint = 'https://script.google.com/macros/s/AKfycbwO5gEsbv3rCDWqYAe12_utq2e0WfvElSOZEVT9ub5A2bjvImHtBTYT3Lbol3ZRRgM2cQ/exec'; // Replace this with your real endpoint
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({ email, message })
+          });
+
+          const result = await response.json();
+          if (result.result === 'success') {
+            alert('Thank you for your feedback!');
+            feedbackForm.reset();
+            wordCountDisplay.textContent = '0 / 100 words';
+          } else {
+            alert('Error sending feedback. Please try again.');
+          }
+        } catch (error) {
+          alert('Error connecting to server. Please try again.');
+          console.error(error);
+        }
       });
     </script>
 </body>
