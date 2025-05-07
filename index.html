@@ -15,58 +15,81 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fff3e0;
-            color: #4e342e;
-            text-align: center;
+            background-color: #EBE9E1;
+            color: #333;
         }
         header {
-            background-color: #ff7043;
-            color: #fffde7;
-            padding: 30px 0;
-            font-size: 26px;
+            background-color: #E43D12;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 32px;
             font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         main {
-            max-width: 800px;
-            margin: 50px auto;
+            max-width: 900px;
+            margin: 40px auto;
             padding: 30px;
-            background-color: #ffe0b2;
-            border: 4px solid #ff7043;
-            border-radius: 12px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-        h1, h2, p {
-            margin-bottom: 20px;
+        h1 {
+            color: #D6536D;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 25px;
         }
         #downloadButton {
             display: inline-block;
-            padding: 15px 30px;
-            background-color: #ff7043;
-            color: #fffde7;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #EFB11D, #FFA2B6);
+            color: #fff;
             text-decoration: none;
-            border: 2px solid #d84315;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: background-color 0.3s, transform 0.2s;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         #downloadButton:hover {
-            background-color: #f4511e;
-            transform: scale(1.05);
+            transform: scale(1.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .features {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .features h2 {
+            color: #E43D12;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .features ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .features li {
+            margin-bottom: 10px;
+            font-size: 16px;
         }
         iframe {
             margin-top: 30px;
             width: 100%;
             max-width: 640px;
             height: 360px;
-            border: 4px solid #ff7043;
-            border-radius: 8px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
         }
         footer {
-            background-color: #ff7043;
-            color: #fffde7;
-            padding: 15px 0;
-            font-size: 12px;
+            background-color: #D6536D;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
             margin-top: 50px;
         }
     </style>
@@ -76,16 +99,29 @@
         MagicTap for Magic Mouse
     </header>
     <main>
-        <h1>Enhance Your Magic Mouse</h1>
-        <p>Download MagicTap to enable smooth tap-to-click functionality on your Apple Magic Mouse.</p>
-        <a href="MagicTap.dmg" id="downloadButton">⬇️ Download MagicTap for Magic Mouse</a>
+        <h1>Enhance Your Apple Magic Mouse</h1>
+        <p>MagicTap brings powerful tap-to-click and gesture recognition to your Magic Mouse. Install it in seconds and enjoy smooth, responsive gestures designed for Mac users.</p>
+        
+        <a href="MagicTap.dmg" id="downloadButton">⬇️ Download MagicTap</a>
 
-        <h2>Setup Tutorial</h2>
-        <!-- Replace the YouTube link below with your actual video -->
+        <div class="features">
+            <h2>Features & Gestures</h2>
+            <ul>
+                <li>✅ Single tap → Left click</li>
+                <li>✅ Double tap → Highlight word (double click)</li>
+                <li>✅ Triple tap → Highlight line/paragraph (triple click)</li>
+                <li>✅ Tap & hold → Drag and drop</li>
+                <li>✅ Right side tap → Right click</li>
+            </ul>
+        </div>
+
+        <h2>Setup Video</h2>
+        <!-- Replace with your actual YouTube embed link -->
         <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
     </main>
+
     <footer>
-        &copy; 2025 MagicTapMouse.com | All rights reserved.
+        &copy; 2025 MagicTapMouse.com &nbsp;|&nbsp; Built with ❤️ for Mac users
     </footer>
 
     <script>
